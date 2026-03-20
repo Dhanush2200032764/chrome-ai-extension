@@ -10,7 +10,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
     resultDiv.innerHTML = "⏳ Generating tasks...";
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/generate-tasks", {
+        const response = await fetch("https://ideal-rotary-phone-wr7jx9v9v6j6hgrp-8000.app.github.dev/generate-tasks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -29,6 +29,6 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
         }
 
     } catch (error) {
-        resultDiv.innerHTML = "❌ Server error. Is FastAPI running?";
+        resultDiv.innerHTML = "❌ Server error";
     }
 });
