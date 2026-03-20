@@ -1,10 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "AI Text Summarizer",
+  "name": "Notion AI Task Generator",
   "version": "1.0",
-  "description": "Summarize text using AI",
+  "description": "Generate tasks from ideas and send to Notion",
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": []
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://127.0.0.1:8000/*"]
 }
