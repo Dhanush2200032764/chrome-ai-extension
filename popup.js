@@ -1,15 +1,16 @@
-document.getElementById("summarizeBtn").addEventListener("click", async () => {
+document.getElementById("generateBtn").addEventListener("click", async () => {
     const text = document.getElementById("inputText").value;
+    const resultDiv = document.getElementById("result");
 
     if (!text) {
-        alert("Enter text first!");
+        resultDiv.innerHTML = "❌ Please enter an idea!";
         return;
     }
 
-    document.getElementById("output").innerText = "Processing...";
+    resultDiv.innerHTML = "⏳ Generating tasks...";
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/summarize", {
+        const response = await fetch("http://127.0.0.1:8000/generate-tasks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -18,9 +19,16 @@ document.getElementById("summarizeBtn").addEventListener("click", async () => {
         });
 
         const data = await response.json();
-        document.getElementById("output").innerText = data.summary;
+
+        if (data.tasks) {
+            resultDiv.innerHTML = "<h3>✅ Tasks:</h3><ul>" +
+                data.tasks.map(task => `<li>${task}</li>`).join("") +
+                "</ul><p>📌 Added to Notion!</p>";
+        } else {
+            resultDiv.innerHTML = "❌ Error generating tasks";
+        }
 
     } catch (error) {
-        document.getElementById("output").innerText = "Error connecting to API";
+        resultDiv.innerHTML = "❌ Server error. Is FastAPI running?";
     }
 });
