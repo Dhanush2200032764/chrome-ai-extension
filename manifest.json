@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "AI Text Summarizer",
+  "version": "1.0",
+  "description": "Summarize text using AI",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}
