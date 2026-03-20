@@ -200,9 +200,4 @@ Beginner → Full Stack Builder 🚀
 ---
 
 ## 👨‍💻 Author
-Durga Dhanush YARAGANI  
-
----
-
-## 📜 License
-MIT License  
+Durga Dhanush Yaragani
