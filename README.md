@@ -17,15 +17,18 @@ I built an AI-powered productivity system that converts ideas into structured ta
 
 ---
 
-## 🏗️ Architecture
+## 📦 Project Structure
 
-Chrome Extension (Frontend)
-↓
-FastAPI Backend (Cloud - Codespaces)
-↓
-Notion API
-↓
-Notion Database
+```text
+chrome-ai-extension/
+├── backend/
+│   └── main.py            # FastAPI server & Notion API logic
+├── extension/
+│   ├── manifest.json      # Extension configuration (V3)
+│   ├── popup.html         # Extension UI
+│   ├── popup.js           # Frontend logic & API calls
+│   └── style.css          # Extension styling
+└── README.md              # Project documentation
 
 
 ---
