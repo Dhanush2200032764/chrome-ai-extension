@@ -3,204 +3,36 @@
 ## 🏆 Hackathon Submission
 
 ### 📌 Description
-I built an AI-powered productivity system that converts ideas into structured tasks and automatically syncs them into Notion using a Chrome extension and FastAPI backend. This system eliminates manual planning and integrates workflows across tools, creating a seamless execution pipeline.
+I built an AI-powered productivity system that converts raw ideas into structured tasks and automatically syncs them into Notion using a Chrome extension and a FastAPI backend. This system eliminates manual planning and integrates workflows across tools, creating a seamless execution pipeline.
 
----
-
-## 🌟 Features
-- ✨ Convert ideas into actionable tasks  
-- 🧠 AI-style task breakdown  
-- 🔗 Automatic sync with Notion database  
-- 🌐 Cloud backend (GitHub Codespaces)  
-- 🧩 Chrome extension interface  
-- ⚡ Real-time task generation  
-
----
-
-## 📦 Project Structure
-
-```text
-chrome-ai-extension/
-├── backend/
-│   └── main.py            # FastAPI server & Notion API logic
-├── extension/
-│   ├── manifest.json      # Extension configuration (V3)
-│   ├── popup.html         # Extension UI
-│   ├── popup.js           # Frontend logic & API calls
-│   └── style.css          # Extension styling
-└── README.md              # Project documentation
-
+### 🌟 Features
+* **✨ Idea Transformation:** Convert vague thoughts into actionable steps.
+* **🧠 AI-Style Logic:** Automated task breakdown for project management.
+* **🔗 Notion Sync:** Real-time database updates via official Notion API.
+* **🌐 Cloud Powered:** Backend hosted via GitHub Codespaces for 24/7 accessibility.
+* **🧩 Minimalist UI:** Lightweight Chrome extension for instant access.
 
 ---
 
 ## 🛠️ Tech Stack
-- Frontend: JavaScript, HTML, CSS  
-- Backend: FastAPI (Python)  
-- API Integration: Notion API  
-- Deployment: GitHub Codespaces  
+* **Frontend:** JavaScript (ES6+), HTML5, CSS3
+* **Backend:** FastAPI (Python)
+* **API Integration:** Notion REST API
+* **Deployment:** GitHub Codespaces / Uvicorn
 
 ---
 
 ## 📦 Project Structure
-
+```text
 chrome-ai-extension/
-│── main.py
-│── manifest.json
-│── popup.html
-│── popup.js
-│── style.css
-│── README.md
-
-
----
-
-## ⚙️ Setup Instructions
-
-### 1. Clone Repository
-
-git clone https://github.com/your-username/chrome-ai-extension.git
-
+├── main.py            # FastAPI server & Notion API logic
+├── manifest.json      # Extension configuration (Manifest V3)
+├── popup.html         # Extension UI elements
+├── popup.js           # Frontend logic & API fetch calls
+├── style.css          # Extension styling & layout
+└── README.md          # Project documentation
+⚙️ Setup Instructions1. Clone & PrepareBashgit clone [https://github.com/YARAGANIDURGADHANUSH/chrome-ai-extension.git](https://github.com/YARAGANIDURGADHANUSH/chrome-ai-extension.git)
 cd chrome-ai-extension
-
-
-### 2. Install Dependencies
-
 pip install fastapi uvicorn requests
-
-
-### 3. Configure Notion API
-- Go to: https://www.notion.so/my-integrations  
-- Create a new integration  
-- Copy the Internal Integration Secret  
-
-Update in `main.py`:
-
-NOTION_TOKEN = "your_secret_token"
-DATABASE_ID = "your_database_id"
-
-
----
-
-### 4. Setup Notion Database
-- Create a Table (Full Page)  
-- Rename first column to:
-
-Name
-
-- Click `••• → Connections → Add AI Task Generator`
-
----
-
-### 5. Run Backend
-
-python3 -m uvicorn main:app --reload
-
-
----
-
-### 6. Load Chrome Extension
-- Open chrome://extensions/  
-- Enable Developer Mode  
-- Click Load Unpacked  
-- Select project folder  
-
----
-
-### 7. Update API URL
-In `popup.js`:
-
-fetch("https://your-codespace-url/generate-tasks
-", {
-
-
----
-
-## 🚀 Usage
-1. Open Chrome Extension  
-2. Enter idea  
-3. Click Generate Tasks  
-4. Tasks automatically appear in Notion  
-
----
-
-## 🎬 Demo Flow
-1. Open Chrome Extension  
-2. Enter idea  
-3. Click Generate  
-4. Open Notion  
-5. Tasks appear automatically  
-
----
-
-## 🧠 Example
-
-### Input
-
-Build AI Chrome Extension
-
-
-### Output
-- 🔍 Research requirements  
-- 🧠 Design architecture  
-- 💻 Develop core features  
-- 🧪 Test and debug  
-- 🚀 Deploy project  
-
----
-
-## ⚡ Highlights
-- Eliminates manual planning  
-- Centralizes workflow in Notion  
-- Demonstrates AI + automation  
-- Full-stack cloud-based system  
-
----
-
-## 🧠 Debugging Lessons
-
-### Tasks not appearing
-
-Fix: Column name must be "Name"
-
-
-### Integration not working
-
-Fix: Use ••• → Connections (not Invite)
-
-
-### Extension not working
-
-Fix: Use Codespaces public URL instead of localhost
-
-
----
-
-## 🏁 Final Status
-
-| Component            | Status |
-|---------------------|--------|
-| FastAPI Backend     | ✅     |
-| Chrome Extension    | ✅     |
-| Notion Integration  | ✅     |
-| Cloud Deployment    | ✅     |
-| End-to-End System   | ✅     |
-
----
-
-## 🔥 Final Result
-
-Beginner → Full Stack Builder 🚀
-
-
----
-
-## 🔮 Future Improvements
-- Add OpenAI / Groq API  
-- GitHub issue automation  
-- Smart prioritization  
-- AI agent workflows  
-
----
-
-## 👨‍💻 Author
-Durga Dhanush Yaragani
+2. Configure Notion APIGo to: Notion IntegrationsCreate a new integration and copy the Internal Integration Secret.Update the following variables in main.py:NOTION_TOKEN = "your_secret_token"DATABASE_ID = "your_database_id"3. Setup Notion DatabaseCreate a Table (Full Page).Rename the first column to exactly: Name.Click ••• (Top Right) → Connections → Add AI Task Generator.4. Launch BackendBashpython3 -m uvicorn main:app --reload
+5. Install Chrome ExtensionOpen chrome://extensions/.Enable Developer Mode.Click Load Unpacked and select the project folder.Important: Update the API URL in popup.js to your public Codespaces URL.🚀 Usage & Demo FlowOpen the Chrome Extension from your browser bar.Enter an idea (e.g., "Build a portfolio website").Click Generate Tasks.Switch to Notion — tasks appear automatically with status and icons.🧠 Example OutputInput: Build AI Chrome ExtensionOutput:🔍 Research requirements🧠 Design architecture💻 Develop core features🧪 Test and debug🚀 Deploy project🏁 Final StatusComponentStatusFastAPI Backend✅Chrome Extension✅Notion Integration✅Cloud Deployment✅End-to-End System✅🧠 Debugging LessonsEmpty Notion DB: Ensure the column is named Name (Not "Task" or "Title").Connection Error: Verify the integration is added via Connections, not just "Invite."CORS/Network: Always use the public HTTPS URL from Codespaces for the extension to communicate with the backend.👨‍💻 AuthorDurga Dhanush Yaragani B.Tech Final Year Student | AI & ML Enthusiast
