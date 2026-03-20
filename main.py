@@ -5,8 +5,8 @@ import requests
 app = FastAPI()
 
 # ----------- CONFIG -----------
-NOTION_TOKEN = "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"
-DATABASE_ID = "32930fd6f0e080158638f04c9d4ae2c1"
+NOTION_TOKEN = "your_notion_token"
+DATABASE_ID = "your_database_id"
 
 # ----------- MODEL -----------
 class TextInput(BaseModel):
