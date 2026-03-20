@@ -1,0 +1,25 @@
+body {
+  width: 300px;
+  font-family: Arial;
+  padding: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  background: #f2f2f2;
+  padding: 5px;
+}
